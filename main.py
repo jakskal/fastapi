@@ -19,7 +19,25 @@ def luas_persegi(sisi: int):
     luas = hitung_luas_persegi(sisi)
     return {"sisi persegi": sisi, "luas":luas}
 
+@app.get("/keliling-persegi/{sisi}")
+def keliling_persegi(sisi: int):
+    luas = hitung_keliling_persegi(sisi)
+    return {"sisi persegi": sisi, "luas":luas}
+
+@app.get("/print-input/{input}")
+def print_input(input):
+    input_print = printinput(input)
+    return {"input": input_print}
+
 def hitung_luas_persegi(sisi: int)->int:
     if sisi < 0 :
         sisi = -1 * sisi
     return sisi*sisi
+
+def printinput(input):
+    return input
+
+def hitung_keliling_persegi(sisi: int)->int:
+    if sisi < 0 :
+        sisi = -1 * sisi
+    return 4*sisi
