@@ -10,7 +10,7 @@ fastapi==0.70.1
 h11==0.12.0
 idna==3.3
 iniconfig==1.1.1
-main @ file:///home/user/angling/python/cicd/heroku/fastapi
+# main @ file:///home/user/angling/python/cicd/heroku/fastapi
 packaging==21.3
 pluggy==1.0.0
 py==1.11.0
