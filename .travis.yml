@@ -11,8 +11,10 @@ before_install:
   - pip install pytest-cov
 install:
   - pip install ".[test]" . # install package + test dependencies
+
+script:
+  - pytest # run tests
   - pytest --cov=./ --cov-report=xml
-script: pytest # run tests
 after_success:
   - codecov # submit coverage
 
