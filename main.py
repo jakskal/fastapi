@@ -13,3 +13,13 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
+
+@app.get("/luas-persegi/{sisi}")
+def luas_persegi(sisi: int):
+    luas = hitung_luas_persegi(sisi)
+    return {"sisi persegi": sisi, "luas":luas}
+
+def hitung_luas_persegi(sisi: int)->int:
+    if sisi < 0 :
+        sisi = -1 * sisi
+    return sisi*sisi
