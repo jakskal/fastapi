@@ -5,3 +5,7 @@ steps:
     with:
       fail_ci_if_error: true
       token: b9619432-5647-4999-8e69-16fb39651ab3 # not required for public repos
+coverage:
+  range: 0..100
+  round: down
+  precision: 2
