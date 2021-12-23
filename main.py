@@ -29,6 +29,16 @@ def print_input(input):
     input_print = printinput(input)
     return {"input": input_print}
 
+@app.get("/luas-persegi-panjang")
+def luas_persegi_panjang(panjang: Optional[int] = None, lebar:Optional[int] = None):
+    panjang_persegi = panjang if panjang else 0,
+    lebar_persegi = lebar if lebar else 0
+    luas = hitung_luas_persegi_panjang(panjang_persegi, lebar_persegi)
+    return {"luas":luas}
+
+def hitung_luas_persegi_panjang(panjang: int, lebar:int):
+    return panjang * lebar
+
 def hitung_luas_persegi(sisi: int)->int:
     if sisi < 0 :
         sisi = -1 * sisi
